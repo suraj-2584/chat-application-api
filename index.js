@@ -10,6 +10,9 @@ app.use(express.urlencoded());
 app.use(express.json());
 
 app.use('/auth',authRoutes);
+app.get('/',(req,res)=>{
+    res.send('hello world')
+})
 const PORT=5000;
 
 app.listen(process.env.PORT || PORT);
